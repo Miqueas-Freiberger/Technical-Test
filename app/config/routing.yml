@@ -1,0 +1,8 @@
+app:
+    resource: '@AppBundle/Controller/'
+    type: annotation
+    
+article_index:
+     path:     /{currentPage}/index
+     defaults: { _controller: "DawInmobiliariaBundle:Inmueble:index" }
+     methods:  GET

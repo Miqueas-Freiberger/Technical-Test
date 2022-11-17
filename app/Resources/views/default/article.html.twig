@@ -1,0 +1,18 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+	<div class="article">
+		<h2 class="article-title">{{articleData.title}}</h2>
+		<img src="{{ asset("/uploads/images/" ~ articleData.pictureRoute) }}" class=" article-img mt-4 ms-3" width="500px" height="350px">
+        <p class="article-descrip">{{articleData.description}}</p>
+    
+    {% if esAdmin == true %}
+        <a class="del-article" href="{{path('deleteArticle',{'id': articleData.id})}}">Delete Article</a>
+    {% endif %}
+    </div>
+    
+{% endblock %}
+{% block stylesheets %}
+	<link href="{{ asset('assets/css/article.css') }}" rel="stylesheet">
+{% endblock %}
+

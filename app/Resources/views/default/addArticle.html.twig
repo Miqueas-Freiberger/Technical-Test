@@ -1,0 +1,20 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+	<div class="addArticleForm">
+		<h3 class="title">Add an Article</h3>
+    {% if errorMsg is defined%}
+		  <div class="alert-danger">{{errorMsg}}</div>
+	  {% endif %}
+		<div class="form-group">
+			{{ form_start(form) }}
+			{{ form_widget(form) }}
+			{{ form_end(form) }}
+		</div>
+
+	</div>
+{% endblock %}
+{% block stylesheets %}
+	<link href="{{ asset('assets/css/home.css') }}" rel="stylesheet">
+{% endblock %}
+

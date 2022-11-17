@@ -1,0 +1,132 @@
+div.addArticleForm {
+    background-color: #f5f5f5;
+    width: 40%;
+    height: 535px;
+    position: relative;
+    left: 31%;
+    top: 32px;
+    border-radius: 8px;
+    box-shadow: 0 8px 12px rgb(9 30 66 / 15%);
+}
+
+a.log-out {
+    position: relative;
+    left: 1790%;
+    top: 7px;
+}
+
+a.article-landing{
+    color: black;
+    text-decoration: none;
+    width: 50%;
+}
+a.article-landing:hover{
+    color: rgb(151, 151, 151);
+    text-decoration: none;
+}
+input#article_title {
+    width: 87%;
+    border: 0;
+    position: relative;
+    left: 6.5%;
+    top: 79px;
+    height: 40px;
+    margin-bottom: 10px;
+    padding: 10px;
+}
+
+textarea#article_description {
+    width: 87%;
+    border: 0;
+    position: relative;
+    left: 6.5%;
+    top: 95px;
+    height: 86px;
+    margin-bottom: 10px;
+    padding: 10px;
+}
+
+input#article_pictureRoute {
+    width: 59%;
+    border: 0;
+    position: relative;
+    left: 6.5%;
+    top: 116px;
+    height: 33px;
+    margin-bottom: 10px;
+}
+
+h3.title {
+    position: relative;
+    left: 35%;
+    top: 20px;
+    width: 34%;
+}
+
+button#article_save {
+    position: relative;
+    top: 180px;
+    left: 6.5%;
+    width: 87%;
+    height: 53px;
+    background-color: #24a0ed;
+    border: 0;
+    border-radius: 8px;
+    color: white;
+    font-size: 25px;
+}
+div.alert-danger {
+    width: 40%;
+    height: 40px;
+    text-align: center;
+    position: relative;
+    color: #721c24;
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
+    position: relative;
+    left: 6.5%;
+    width: 86%;
+    padding: 8px;
+    top: 45px;
+}
+.article-title{
+    position: relative;
+    top: 20px;
+}
+p.article-descrip{
+    position: relative;
+    top: 20px;
+}
+div.article{
+    margin-top: 30px;
+    width: 40%;
+    height: 500px;
+    border-radius: 8px;
+    text-align: center;
+    position: relative;
+    left: 31%;
+    top: 25px;
+    background-color: #f3f3f3;
+    box-shadow: 0 8px 12px rgb(9 30 66 / 15%);
+}
+img.article-img {
+    border: 3px solid;
+}
+ul li.paginator{
+    display: inline;
+    position: relative;
+    left: 0%;
+    top: 13px;
+    margin: 10px;
+    font-size: 20px;
+}
+ul.paginator-container{
+    width: 46%;
+    position: relative;
+    left: 28%;
+    top: 34px;
+    height: 49px;
+}
+ul li.paginator a{
+    color: black;
+}

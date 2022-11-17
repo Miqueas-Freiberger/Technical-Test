@@ -1,0 +1,43 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+	{% for a in articles %}
+
+		<div class="article">
+			<a class="article-landing" href="{{path('article',{'id':a.id})}}">
+				<h2 class="article-title">{{a.title}}</h2>
+			<img src="{{ asset("/uploads/images/" ~ a.pictureRoute) }}" class=" article-img mt-4 ms-3" width="500px" height="350px">
+			</a>
+		</div>
+
+	{% endfor %}
+
+	{% if maxPages > 1 %}
+    <ul class="paginator-container">
+        {%if thisPage > 1 %}
+            <li  class="paginator" >
+                <a  href="{{ path('article_index', {currentPage: thisPage-1 < 1 ? 1 : thisPage-1}) }}">«</a>
+            </li>
+        {% endif %}
+
+        {# Render each page number #}
+        {% for i in 1..maxPages %}
+            <li class="paginator" >
+                <a  href="{{ path('article_index', {currentPage: i}) }}">{{ i }}</a>
+            </li>
+        {% endfor %}
+
+        {# `»` arrow #}
+        {%if thisPage < maxPages %}
+            <li class="paginator" >
+                <a  href="{{ path('article_index', {currentPage: thisPage+1 <= maxPages ? thisPage+1 : thisPage}) }}">»</a>
+            </li>
+        {% endif %}
+    </ul>
+{% endif %}
+
+{% endblock %}
+{% block stylesheets %}
+	<link href="{{ asset('assets/css/home.css') }}" rel="stylesheet">
+{% endblock %}
+

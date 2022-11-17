@@ -1,0 +1,60 @@
+.article-title{
+    position: relative;
+    top: 20px;
+}
+p.article-descrip{
+    position: relative;
+    top: -281px;
+    left: 110%;
+    font-size: 22px;
+    font-weight: 500;
+    border-radius: 8px;
+    background-color: #f3f3f3;
+    box-shadow: 0 8px 12px rgb(9 30 66 / 15%);
+    width: 130%;
+    height: 200%;
+    padding: 18px;
+    animation: float 2.5s ease-in-out infinite;
+}
+div.article{
+    margin-top: 30px;
+    width: 40%;
+    text-align: center;
+    position: relative;
+    left: 0%;
+    top: -30px;
+}
+img.article-img {
+    border: 3px solid;
+}
+a.log-out {
+    position: relative;
+    left: 1790%;
+    top: 7px;
+}
+div.article a.del-article{
+    position: relative;
+    top: -608px;
+    left: 35%;
+    color: red;
+}
+div.article a.del-article:hover{
+    text-decoration: underline;
+    color: red;
+    cursor: pointer;
+}
+
+@keyframes float {
+	0% {
+		box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+		transform: translatey(0px);
+	}
+	50% {
+		box-shadow: 0 25px 15px 0px rgba(0,0,0,0.2);
+		transform: translatey(-20px);
+	}
+	100% {
+		box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+		transform: translatey(0px);
+	}
+}

@@ -1,0 +1,30 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+	{% if errorMsg is defined%}
+		<div class="alert alert-danger" role="alert">{{errorMsg}}</div>
+	{% endif %}
+
+	<div id="container">
+		<div id="central">
+			<div id="login">
+				<div class="title">
+					Welcome
+				</div>
+				<form id="loginform" method="POST" action="{{path('login')}}">
+					<input type="text" name="username" placeholder="Username" required>
+
+					<input type="password" placeholder="password" name="password" required>
+
+					<button type="submit">Login</button>
+				</form>
+			</div>
+		</div>
+	</div>
+{% endblock %}
+
+{% block stylesheets %}
+	<link href="{{ asset('assets/css/login.css') }}" rel="stylesheet">
+	<link href="{{ asset('assets/css/home.css') }}" rel="stylesheet">
+{% endblock %}
+
